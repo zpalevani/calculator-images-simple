@@ -1,0 +1,134 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: #f0f2f5;
+}
+
+/* --- SECTION 1: ABOVE THE FOLD (UPDATED) --- */
+.above-the-fold {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+}
+.page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.image-container {
+    width: 320px;
+    height: 450px;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* CORRECTED: New filter for a lighter, grayish feel */
+    filter: grayscale(80%) brightness(110%) contrast(90%);
+}
+.calculator {
+    width: 340px;
+    height: 520px;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+    background-color: #EAEAEA;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+/* CORRECTED: Styles to ensure the calculator screen size is constant */
+.calculator-screen {
+    height: 140px; /* Fixed height */
+    padding: 20px;
+    text-align: right;
+    word-wrap: break-word;
+    word-break: break-all;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; /* Better vertical alignment */
+}
+.previous-operand, .current-operand {
+    width: 100%;
+    overflow: hidden; /* Hide overflowing text */
+    white-space: nowrap; /* Prevent text from wrapping */
+    text-overflow: ellipsis; /* Add "..." for very long text */
+}
+.previous-operand { font-size: 1.2rem; font-weight: 400; opacity: 0.7; min-height: 28px; }
+.current-operand { font-size: 2.8rem; font-weight: 500; }
+/* End of corrected screen styles */
+
+.calculator-keys {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    padding: 20px;
+}
+.calculator button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 0;
+    border-radius: 16px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    transition: all .15s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.calculator button:active { transform: scale(0.96); box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+.calculator [data-number] { background-color: #fdfdfd; color: #333; }
+.function { background-color: #D4D4D2; color: #333; }
+.operator { background-color: #E85D04; color: white; font-size: 1.5rem; }
+.span-two { grid-column: span 2; }
+
+
+/* --- SECTION 2: BELOW THE FOLD (UNCHANGED) --- */
+.below-the-fold { padding: 3rem 2rem; background-color: #eef1f5; }
+.apps-grid { display: grid; max-width: 1200px; margin: 0 auto; grid-template-columns: 1fr 2fr; gap: 30px; }
+.app-container { background: #fff; border-radius: 20px; padding: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); display: flex; flex-direction: column; }
+.app-container h3 { margin-top: 0; color: #333; padding-bottom: 10px; border-bottom: 1px solid #eee;}
+#city-select { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px; font-size: 1.1rem; font-family: 'Poppins', sans-serif; background-color: #f9f9f9; cursor: pointer; }
+.weather-body { flex-grow: 1; display: flex; align-items: center; justify-content: center; gap: 20px; }
+.weather-icon { font-size: 5rem; }
+.weather-temp { font-size: 4rem; font-weight: 600; color: #333; }
+.weather-footer { display: flex; justify-content: space-around; padding-top: 15px; color: #777; border-top: 1px solid #eee; }
+.todo-app { padding: 30px; }
+#task-list { list-style: none; padding: 0; margin: 0; flex-grow: 1; overflow-y: auto; }
+#task-list li { display: flex; align-items: center; padding: 15px; background-color: #f9f9f9; border: 1px solid #eee; border-radius: 12px; margin-bottom: 10px; transition: background-color 0.2s, box-shadow 0.2s; }
+#task-list li:hover { background-color: #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.07); }
+#task-list li.completed .task-text { text-decoration: line-through; color: #aaa; }
+.task-content { flex-grow: 1; cursor: pointer; }
+.task-text { font-size: 1.1rem; color: #333; }
+.task-date { font-size: 0.85rem; color: #FF9500; margin-left: 10px; font-weight: 500; }
+.delete-button { background: transparent; color: #ff5c5c; border: none; font-size: 1.2rem; cursor: pointer; opacity: 0.5; transition: opacity 0.2s; }
+.delete-button:hover { opacity: 1; }
+.todo-input-container { display: flex; gap: 10px; margin-top: 20px; }
+#todo-input { flex-grow: 1; border: 1px solid #ddd; border-radius: 8px; padding: 12px; font-size: 1rem; }
+#todo-date-input { border: 1px solid #ddd; border-radius: 8px; padding: 10px; font-family: 'Poppins', sans-serif; color: #555; }
+#add-task-button { background-color: #4a90e2; color: white; font-size: 1rem; font-weight: 500; border-radius: 8px; border: none; padding: 0 20px; cursor: pointer; transition: background-color 0.2s; }
+#add-task-button:hover { background-color: #3a7bc8; }
+
+/* --- RESPONSIVENESS --- */
+@media (max-width: 1200px) {
+    .page-container { flex-direction: column; }
+}
+@media (max-width: 1024px) {
+    .apps-grid { grid-template-columns: 1fr; }
+}

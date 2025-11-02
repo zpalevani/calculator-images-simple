@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Page</title>
+    <!-- Google Font Import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- SECTION 1: CALCULATOR AND IMAGES (ABOVE THE FOLD) -->
+    <section class="above-the-fold">
+        <div class="page-container">
+            <!-- Cat Image -->
+            <div class="image-container">
+                <img src="cat1.jpg" alt="A cute cat raising its paw">
+            </div>
+
+            <!-- Calculator -->
+            <div class="calculator">
+                <div class="calculator-screen">
+                    <div id="previous-operand" class="previous-operand"></div>
+                    <div id="current-operand" class="current-operand">0</div>
+                </div>
+                <div class="calculator-keys">
+                    <button data-all-clear class="function span-two">AC</button>
+                    <button data-delete class="function">DEL</button>
+                    <button data-operator class="operator">÷</button>
+                    <button data-number>7</button>
+                    <button data-number>8</button>
+                    <button data-number>9</button>
+                    <button data-operator class="operator">×</button>
+                    <button data-number>4</button>
+                    <button data-number>5</button>
+                    <button data-number>6</button>
+                    <button data-operator class="operator">+</button>
+                    <button data-number>1</button>
+                    <button data-number>2</button>
+                    <button data-number>3</button>
+                    <button data-operator class="operator">-</button>
+                    <button data-number>.</button>
+                    <button data-number>0</button>
+                    <button data-equals class="operator span-two">=</button>
+                </div>
+            </div>
+
+            <!-- Dog Image -->
+            <div class="image-container">
+                <img src="dog1.jpg" alt="A happy dog running on a beach">
+            </div>
+        </div>
+    </section>
+    
+    <!-- SECTION 2: APPLICATIONS (BELOW THE FOLD) -->
+    <section class="below-the-fold">
+        <div class="apps-grid">
+            <!-- App 1: Weather App with Dropdown -->
+            <div class="app-container weather-app">
+                <div class="weather-header">
+                    <select id="city-select">
+                        <option value="Tehran, Iran">Tehran, Iran</option>
+                        <option value="Ottawa, ON, Canada">Ottawa, ON, Canada</option>
+                        <option value="Halifax, NS, Canada">Halifax, NS, Canada</option>
+                    </select>
+                </div>
+                <div class="weather-body">
+                    <div class="weather-icon">☀️</div>
+                    <div class="weather-temp">15°c</div>
+                </div>
+                <div class="weather-footer">
+                    <span>Humidity: 30%</span>
+                    <span>Wind: 5 km/h</span>
+                </div>
+            </div>
+
+            <!-- App 2: Modern To-Do List App -->
+            <div class="app-container todo-app">
+                <h3>My Tasks</h3>
+                <ul id="task-list"></ul>
+                <div class="todo-input-container">
+                    <input type="text" id="todo-input" placeholder="Add a new task...">
+                    <input type="date" id="todo-date-input">
+                    <button id="add-task-button">Add Task</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="code.js"></script>
+</body>
+</html>

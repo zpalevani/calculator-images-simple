@@ -1,0 +1,16 @@
+i have two photos, a cat (cat1.jpg) and a dog (dog1.jpg). i want to have a html page "index.html" and a css stylesheet "style.css" to have a beautiful html page that contains these two pictures with relevant title and a short description. 
+
+i have two pictures , one of them is a picture of a cat "cat1.jpg" and one of them is a picture of a dog "dog1.jpg" , i want to design a simple html page named "index.html" with css style named "style.css" , this html page should consists of these two pictures in a card with a title and a description relevant to each picture
+
+I want a calculator with html and css and JavaScript. i want to give this calculator in index.html, style.css and code.js , the design should be beautiful  and and  i want calculator screen have a glass look effect . 
+
+the design looks very blue and not so much good  , redesign the calculator and change the background color , also change the main color of the calculator with a solid gray look , the background of page should be white , give me the full corrected code
+
+i don't like the background color of operator buttons and also hover background color of them , change it to a dark purple background color and a little lighter for hover , give me the full new style.css code
+
+i don't like the background color of the operator buttons and also hover background color of them. change it to a dark purple background color and a little lighter for hover. and give me the corrected full style.css code.
+
+
+
+
+
